@@ -41,9 +41,18 @@ app.get('/contact', function(req, res) {
     res.render('contact', { contactContent: contactContent });
 });
 
+app.get('/compose', function(req, res) {
+    res.render('compose');
+});
 
 // POST ROUTES
 
+app.post('/compose', function(req, res) {
+    console.log("New Post: ");
+    console.log(req.body.postTitle);
+
+    const newPost = req.body.postTitle;
+});
 
 
 

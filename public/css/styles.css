@@ -2,6 +2,10 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+/**********************************
+NAVBAR
+**********************************/
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -15,6 +19,9 @@
     color: #1abc9c !important;
 }
 
+/**********************************
+FOOTER
+**********************************/
 .footer-padding {
 	padding-bottom: 60px;
 }
@@ -31,4 +38,22 @@
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
+}
+
+/**********************************
+COMPOSE
+**********************************/
+.postLabel, 
+.postInput,
+#publish-btn {
+    display: block;
+    margin: 1.5rem 0;
+}
+.postInput {
+    padding: 0.5rem;
+}
+#publish-btn {
+    background-color: #1abc9c;
+    color: #ffffff;
+    font-weight: 800;
 }
