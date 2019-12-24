@@ -34,7 +34,6 @@ FOOTER
 	height: 60px;
 	background-color: #f8f8f8;
 }
-
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
@@ -43,15 +42,6 @@ FOOTER
 /**********************************
 COMPOSE
 **********************************/
-.postLabel, 
-.postInput,
-#publish-btn {
-    display: block;
-    margin: 1.5rem 0;
-}
-.postInput {
-    padding: 0.5rem;
-}
 #publish-btn {
     background-color: #1abc9c;
     color: #ffffff;

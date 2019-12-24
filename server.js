@@ -27,9 +27,12 @@ app.use(express.json());
 // STATIC FILES
 app.use(express.static('public'));
 
+// var to store all blog entries
+let posts = [];
 
 // GET ROUTES
 app.get('/', function(req, res) {
+    console.log(posts);
     res.render('home', { homeContent: homeStartingContent });
 });
 
@@ -48,10 +51,14 @@ app.get('/compose', function(req, res) {
 // POST ROUTES
 
 app.post('/compose', function(req, res) {
-    console.log("New Post: ");
-    console.log(req.body.postTitle);
+    const post = {
+        title: req.body.postTitle,
+        content: req.body.postBody
+    };
+    // console.log(post);
+    posts.push(post);
 
-    const newPost = req.body.postTitle;
+    res.redirect('/');
 });
 
 
