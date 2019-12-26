@@ -32,8 +32,9 @@ let posts = [];
 
 // GET ROUTES
 app.get('/', function(req, res) {
-    console.log(posts);
-    res.render('home', { homeContent: homeStartingContent });
+    res.render('home', {
+        posts: posts
+    });
 });
 
 app.get('/about', function(req, res) {
