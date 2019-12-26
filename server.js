@@ -42,9 +42,10 @@ app.get('/posts/:postName', function(req, res) {
     posts.forEach(function(post) {
         let storedTitle = lodash.lowerCase(post.title);
         if (requestedTitle === storedTitle) {
-            console.log("Match found!");
-        } else {
-            console.log("Not a match.");
+            res.render('post', { 
+                title: post.title,
+                content: post.content
+            });
         };
     });
 });
@@ -73,7 +74,6 @@ app.post('/compose', function(req, res) {
 
     res.redirect('/');
 });
-
 
 
 // LISTEN
